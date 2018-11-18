@@ -22,12 +22,11 @@ void zadanie1_2()
 	printf("wartosc zmiennej typu int: %d \n", i);
 }
 
-// Pobrac od uzytkownika liczbe x. Wyswietlic kwadrat liczby x.
-
+//Pobrac od uzytkownika liczbe x. Wyswietlic kwadrat liczby x.
 void zadanie1_3()
 {
 	int x;
-	cout<<"Wpisz liczbê: ";
+	cout<<"Wpisz liczbe: ";
 	cin>>x;
 	cout<<"Kwadrat podanej liczby to: "<<pow(x, 2)<<endl;
 }
