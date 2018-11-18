@@ -50,10 +50,39 @@ void zadanie1_4()
 	}
 	cout<<endl;
 }
+
+//Pobrac ud uzytkownika 3 liczby (x1, x2, x3). Wyswietlic informacje, ktora z tych liczb jest najwieksza.
+void zadanie1_5()
+{
+	int x1, x2, x3;
+	cout<<"Zadanie 1.5"<<endl;
+	cout<<"Wpisz pierwsza liczbe: ";
+	cin>>x1;
+	cout<<"Wpisz druga liczbe: ";
+	cin>>x2;
+	cout<<"Wpisz trzecia liczbe: ";
+	cin>>x3;
+	cout<<"Najwieksza liczba to: ";
+	if (x1 > x2) {
+		if (x1 > x3){
+			cout<<x1<<" (pierwsza)";
+		} else {
+			cout<<x3<<" (trzecia)";
+		}
+	} else {
+		if (x2 > x3){
+			cout<<x2<<" (druga)";
+		} else {
+			cout<<x3<<" (trzecia)";
+		}
+	}
+	cout<<endl;
+}
 int main() {
 	zadanie1_1();
 	zadanie1_2();
 	zadanie1_3();
 	zadanie1_4();
+	zadanie1_5();
 	return 0;
 }
