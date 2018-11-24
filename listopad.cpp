@@ -2,6 +2,11 @@
 #include <math.h>
 using namespace std;
 
+void clear()
+{
+	system("cls");
+}
+
 // Zadeklarowac zmienne typu int, float, char. Przypisac do nich wartosc, wyswietlic je na ekran
 void zadanie1_1 ()
 {
@@ -103,16 +108,26 @@ void zadanie1_6(){
 	cout<<"Kontynuowaæ? (y/n)";
 	cin>>oper;
 	switch (oper) {
-		case 'y': zadanie1_6(); break;
-		default: break;
+		case 'y':
+			clear();
+			zadanie1_6();
+			break;
+		default:
+			break;
 	}
 }
 int main() {
 	//zadanie1_1();
+	clear();
 	//zadanie1_2();
+	clear();
 	//zadanie1_3();
+	clear();
 	//zadanie1_4();
+	clear();
 	//zadanie1_5();
+	clear();
 	zadanie1_6();
+	clear();
 	return 0;
 }
