@@ -116,18 +116,30 @@ void zadanie1_6(){
 			break;
 	}
 }
+
+void zadanie2_1()
+{
+	int a;
+	cout<<"Zadanie 2.1"<<endl;
+	do {
+		cout<<"Podaj liczbê: ";
+		cin>>a;
+	} while(a != 0);
+}
 int main() {
 	//zadanie1_1();
-	clear();
+	//clear();
 	//zadanie1_2();
-	clear();
+	//clear();
 	//zadanie1_3();
-	clear();
+	//clear();
 	//zadanie1_4();
-	clear();
+	//clear();
 	//zadanie1_5();
-	clear();
-	zadanie1_6();
+	//clear();
+	//zadanie1_6();
+	//clear();
+	zadanie2_1();
 	clear();
 	return 0;
 }
