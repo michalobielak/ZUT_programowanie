@@ -160,6 +160,21 @@ void zadanie2_2()
 		cin>>oper;
 	} while (oper == 'y');
 };
+
+//Pobrac od uzytkownika liczbe x.
+//Nalezy wyswietlic wszystkie kolejne potegi liczby x. Zakonczyc program, kiedy liczba przekroczy 100000
+void zadanie2_3()
+{
+	int x, wynik;
+	cout<<"Zadanie 2.3"<<endl;
+	cout<<"Podaj liczbe: ";
+	cin>>x;
+	wynik = 1;
+	do {
+		wynik = wynik * x;
+		cout<<wynik<<", ";
+	} while (wynik <= 100000);
+}
 int main() {
 	//zadanie1_1();
 	//clear();
@@ -175,6 +190,8 @@ int main() {
 	//clear();
 	//zadanie2_1();
 	//clear();
-	zadanie2_2();
+	//zadanie2_2();
+	//clear();
+	zadanie2_3();
 	return 0;
 }
