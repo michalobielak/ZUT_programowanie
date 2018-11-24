@@ -117,15 +117,49 @@ void zadanie1_6(){
 	}
 }
 
+//Zapoznac sie z petla while.
+//Petla ta sluzy do wielokrotnego wykonania fragmentu kodu przez NIEZNANA Z GORY ilosc razy.
+//Petla wykonuje sie zawsze, jesli warunek jest prawdziwy (ewaluowany do true).
+//Napisac petle, w ktorej uzytkownik podaje liczbe x. Nalezy wyswietlic te liczbe.
+//Jezeli uzytkownik poda 0, nalezy zakonczyc program.
 void zadanie2_1()
 {
 	int a;
 	cout<<"Zadanie 2.1"<<endl;
 	do {
-		cout<<"Podaj liczbê: ";
+		cout<<"Podaj liczbe: ";
 		cin>>a;
 	} while(a != 0);
 }
+
+//Przerobic kalkulator z zadania 1.6.
+//Teraz po kazdym dzialaniu program powinien spytac uzytkownika, czy ten chce powtorzyc wszystko od poczatku.
+//Jesli tak - restartujey kalkulator i zaczynamy od nowa.
+//Jesli nie - konczymy program.
+void zadanie2_2()
+{
+	float wynik, a, b;
+	char oper;
+	cout<<"Zadanie 2.2"<<endl;
+	do {
+		cout<<"Wprowadz pierwsza liczbe: ";
+		cin>>a;
+		cout<<"Wprowadz druga liczbe: ";
+		cin>>b;
+		cout<<"Wprowadz operator dzialania: ";
+		cin>>oper;
+		switch (oper) {
+			case '+': wynik = a + b; break;
+			case '-': wynik = a - b; break;
+			case '*': wynik = a * b; break;
+			case '/': wynik = a / b; break;
+			default: cout<<"Bledny znak"<<endl;
+		}
+		cout<<"Wynik dzialania "<<a<<oper<<b<<" to: "<<wynik<<endl;
+		cout<<"Kontynuowaæ? (y/n)";
+		cin>>oper;
+	} while (oper == 'y');
+};
 int main() {
 	//zadanie1_1();
 	//clear();
@@ -139,7 +173,8 @@ int main() {
 	//clear();
 	//zadanie1_6();
 	//clear();
-	zadanie2_1();
-	clear();
+	//zadanie2_1();
+	//clear();
+	zadanie2_2();
 	return 0;
 }
