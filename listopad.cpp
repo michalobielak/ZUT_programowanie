@@ -175,6 +175,23 @@ void zadanie2_3()
 		cout<<wynik<<", ";
 	} while (wynik <= 100000);
 }
+
+// Pobrac od uzytkownika liczbe x.
+//Jesli liczba jest niedodatnia - nalezy zakonczyc program.
+//Nastepnie nalezy wyswietlac kolejno (wnowej linii) wszystkie liczby mniejsze od x,
+//az osiagniete zostanie 0.
+void zadanie2_4()
+{
+	int x;
+	cout<<"Zadanie 2.4"<<endl;
+	cout<<"Podaj liczbe: ";
+	cin>>x;
+	if (x > 0) {
+		do {
+			cout<<x--<<endl;
+		} while (x >= 0);
+	}
+}
 int main() {
 	//zadanie1_1();
 	//clear();
@@ -192,6 +209,8 @@ int main() {
 	//clear();
 	//zadanie2_2();
 	//clear();
-	zadanie2_3();
+	//zadanie2_3();
+	//clear()
+	zadanie2_4();
 	return 0;
 }
