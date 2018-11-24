@@ -78,11 +78,41 @@ void zadanie1_5()
 	}
 	cout<<endl;
 }
+
+//Napisaæ prosty kalkulator.
+//Nale¿y pobraæ od u¿ytkownika 2 liczby oraz operator (jeden z czterech: mno¿enie, dzielenie, dodawanie,odejmowanie).
+//Wymagane jest utworzenie prostego menu u¿ytkownika. Uwaga - nale¿y pamiêtaæ o u³amkach (1/3 powinno daæ 0.33, a nie0)
+void zadanie1_6(){
+	float wynik, a, b;
+	char oper;
+	cout<<"Zadanie 1.6"<<endl;
+	cout<<"Wprowadz pierwsza liczbe: ";
+	cin>>a;
+	cout<<"Wprowadz druga liczbe: ";
+	cin>>b;
+	cout<<"Wprowadz operator dzialania: ";
+	cin>>oper;
+	switch (oper) {
+		case '+': wynik = a + b; break;
+		case '-': wynik = a - b; break;
+		case '*': wynik = a * b; break;
+		case '/': wynik = a / b; break;
+		default: cout<<"Bledny znak"<<endl;
+	}
+	cout<<"Wynik dzialania "<<a<<oper<<b<<" to: "<<wynik<<endl;
+	cout<<"Kontynuowaæ? (y/n)";
+	cin>>oper;
+	switch (oper) {
+		case 'y': zadanie1_6(); break;
+		default: break;
+	}
+}
 int main() {
-	zadanie1_1();
-	zadanie1_2();
-	zadanie1_3();
-	zadanie1_4();
-	zadanie1_5();
+	//zadanie1_1();
+	//zadanie1_2();
+	//zadanie1_3();
+	//zadanie1_4();
+	//zadanie1_5();
+	zadanie1_6();
 	return 0;
 }
