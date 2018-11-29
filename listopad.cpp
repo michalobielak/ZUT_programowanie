@@ -192,25 +192,122 @@ void zadanie2_4()
 		} while (x >= 0);
 	}
 }
+
+//Zapoznaæ siê z instrukcjami continue; i break;. Pierwsza s³u¿y do zakoñczenia iteracji i przejœcia do nastêpnej,
+//a druga natychiast koñczy pêtlê. Przerobiæ program z zadania 1.4,
+//aby wyœwietla³ tylko parzyste liczby (u¿yæ if oraz continue). Jeœli liczba wynosi 40, nale¿ywyjœæ z pêtli i zakoñczyæ program
+void zadanie2_5()
+{
+	int x;
+	cout<<"Zadanie 2.5"<<endl;
+	cout<<"Podaj liczbe: ";
+	cin>>x;
+	if (x > 0) {
+		do {
+			if (x % 2){	
+				x--;		
+				continue;
+			} else {
+				cout<<x--<<endl;
+			}
+		
+		} while (x >= 0);
+	}
+}
+
+// Napisaæ pêtlê for, która wyœwietli cyfry od 0 do 9.
+void zadanie2_6()
+{
+	cout<<"Zadanie 2.6"<<endl;
+	for (int i = 1; i<=9; i++) {
+		cout<<i<< ' ';
+	}
+}
+
+//Pobraæ od u¿ytkownika liczby x i y. Zak³adamy, ¿e y > x (zawsze, nie musimy tego sprawdzaæ).
+//Za pomoc¹ pêtli for wypisaæ liczby miêdzy x a y (do przemyœlenia - co jest stanem pocz¹tkowym, a co warunkiem zakoñczenia pêtli?)
+void zadanie2_7()
+{
+	int x, y;
+	cout<<"Zadanie 2.7"<<endl;
+	cout<<"Podaj liczbe: ";
+	cin>>x;	
+	cout<<"Podaj liczbe: ";
+	cin>>y;
+	for (x;x<y;++x) {
+		cout<<x<< ' ';
+	}		
+}
+
+//Pobraæ od u¿ytkownika liczbê x. Za pomoc¹ pêtli for wypisaæ wszystkie liczby mniejsze od x, ale wiêksze ni¿ 0
+void zadanie2_8()
+{
+	int x;
+	cout<<"Zadanie 2.8"<<endl;
+	cout<<"Podaj liczbe: ";
+	cin>>x;
+	for (x;x>0;--x) {
+		cout<<x<< ' ';
+	}
+}
+
+//Pobraæ od u¿ytkownika liczbê x. Za pomoc¹ pêtli for wypisywaæ CO TRZECI¥ liczbê wiêksz¹ od x.
+//Pêtla powinna siê zakoñczyæ, jeœliliczba przekroczy 100. Uwaga - proszê nie u¿ywaæ operacji continue i break, a sterowaæ tylko parametrami pêtli.
+void zadanie2_9()
+{
+	int x;
+	cout<<"Zadanie 2.9"<<endl;
+	cout<<"Podaj liczbe: ";
+	cin>>x;
+	for (x; x<=100; x+=3){
+		cout<<x<< ' ';
+	}
+	
+}
 int main() {
 	//zadanie1_1();
+	//system("pause");
 	//clear();
 	//zadanie1_2();
+	//system("pause");
 	//clear();
 	//zadanie1_3();
+	//system("pause");
 	//clear();
 	//zadanie1_4();
+	//system("pause");
 	//clear();
 	//zadanie1_5();
+	//system("pause");
 	//clear();
 	//zadanie1_6();
+	//system("pause");
 	//clear();
 	//zadanie2_1();
+	//system("pause");
 	//clear();
 	//zadanie2_2();
+	//system("pause");
 	//clear();
 	//zadanie2_3();
-	//clear()
-	zadanie2_4();
+	//system("pause");
+	//clear();
+	//zadanie2_4();
+	//system("pause");
+	//clear();
+	//zadanie2_5();
+	//system("pause");
+	//clear();
+	//zadanie2_6();
+	//system("pause");
+	//clear();
+	//zadanie2_7();
+	//system("pause");
+	//clear();
+	//zadanie2_8();
+	//system("pause");
+	//clear();
+	zadanie2_9();
+	system("pause");
 	return 0;
 }
