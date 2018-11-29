@@ -264,7 +264,38 @@ void zadanie2_9()
 	}
 	
 }
+
+//Napisaæ metodê void NewLine(). Powinna ona wypisaæ na ekran pojedyncz¹ pust¹ liniê. U¿yæ tej metodê w main()
+void Newline()
+{
+	cout<<""<<endl;
+}
+
+// Napisaæ metodê void NewLines(int count). Powinna ona wypisaæ tyle nowych linii, ile zosta³o podanych W PARAMETRZE count (nale¿y u¿yæ pêtli for). U¿yæ metodê w main()
+void Newlines(int x)
+{
+	for (int i=1; i<=x;i++) {
+		cout<<""<<endl;
+	}
+}
+
+//
+int WriteBiggerNumber(int x, int y)
+{
+	if (x >= y) {
+		return x;
+	} else {
+		return y;
+	}
+}
+
+//
+int Multiply(int x, int y)
+{
+	return x*y;
+}
 int main() {
+	int x, y;
 	//zadanie1_1();
 	//system("pause");
 	//clear();
@@ -307,7 +338,31 @@ int main() {
 	//zadanie2_8();
 	//system("pause");
 	//clear();
-	zadanie2_9();
+	//zadanie2_9();
+	//system("pause");
+	cout<<"Zadanie 3.1"<<endl;
+	Newline();
 	system("pause");
+	clear();
+	cout<<"Zadanie 3.2"<<endl;
+	Newlines(4);
+	system("pause");
+	clear();
+	cout<<"Zadanie 3.3"<<endl;
+	cout<<"Podaj liczbe: ";
+	cin>>x;
+	cout<<"Podaj liczbe: ";
+	cin>>y;
+	cout<<WriteBiggerNumber(x, y);
+	system("pause");
+	clear();
+	cout<<"Zadanie 3.4"<<endl;
+		cout<<"Podaj liczbe: ";
+	cin>>x;
+	cout<<"Podaj liczbe: ";
+	cin>>y;
+	cout<<Multiply(x, y);
+	system("pause");
+	clear();
 	return 0;
 }
