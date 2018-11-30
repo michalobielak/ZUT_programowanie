@@ -193,9 +193,9 @@ void zadanie2_4()
 	}
 }
 
-//Zapoznaæ siê z instrukcjami continue; i break;. Pierwsza s³u¿y do zakoñczenia iteracji i przejœcia do nastêpnej,
-//a druga natychiast koñczy pêtlê. Przerobiæ program z zadania 1.4,
-//aby wyœwietla³ tylko parzyste liczby (u¿yæ if oraz continue). Jeœli liczba wynosi 40, nale¿ywyjœæ z pêtli i zakoñczyæ program
+//Zapoznac sie z instrukcjami continue; i break;. Pierwsza sluzy do zakonczenia iteracji i przejscia do nastepnej,
+//a druga natychiast konczy petle. Przerobic program z zadania 1.4,
+//aby wyswietlal tylko parzyste liczby (uzyæ if oraz continue). Jesli liczba wynosi 40, nalezy wyjsc z petli i zakonczyc program
 void zadanie2_5()
 {
 	int x;
@@ -215,7 +215,7 @@ void zadanie2_5()
 	}
 }
 
-// Napisaæ pêtlê for, która wyœwietli cyfry od 0 do 9.
+// Napisac petle for, ktora wyswietli cyfry od 0 do 9.
 void zadanie2_6()
 {
 	cout<<"Zadanie 2.6"<<endl;
@@ -224,8 +224,8 @@ void zadanie2_6()
 	}
 }
 
-//Pobraæ od u¿ytkownika liczby x i y. Zak³adamy, ¿e y > x (zawsze, nie musimy tego sprawdzaæ).
-//Za pomoc¹ pêtli for wypisaæ liczby miêdzy x a y (do przemyœlenia - co jest stanem pocz¹tkowym, a co warunkiem zakoñczenia pêtli?)
+//Pobrac od uxytkownika liczby x i y. Zakladamy, ¿e y > x (zawsze, nie musimy tego sprawdzac).
+//Za pomoca petli for wypisac liczby miedzy x a y (do przemyslenia - co jest stanem poczatkowym, a co warunkiem zakonczenia petli?)
 void zadanie2_7()
 {
 	int x, y;
@@ -239,7 +239,7 @@ void zadanie2_7()
 	}		
 }
 
-//Pobraæ od u¿ytkownika liczbê x. Za pomoc¹ pêtli for wypisaæ wszystkie liczby mniejsze od x, ale wiêksze ni¿ 0
+//Pobrac od uxytkownika liczbe x. Za pomoca petli for wypisac wszystkie liczby mniejsze od x, ale wieksze niz 0
 void zadanie2_8()
 {
 	int x;
@@ -251,8 +251,8 @@ void zadanie2_8()
 	}
 }
 
-//Pobraæ od u¿ytkownika liczbê x. Za pomoc¹ pêtli for wypisywaæ CO TRZECI¥ liczbê wiêksz¹ od x.
-//Pêtla powinna siê zakoñczyæ, jeœliliczba przekroczy 100. Uwaga - proszê nie u¿ywaæ operacji continue i break, a sterowaæ tylko parametrami pêtli.
+//Pobrac od uzytkownika liczbe x. Za pomoca petli for wypisywac CO TRZECIA liczbe wieksza od x.
+//Petla powinna sie zakonczyc, jesli liczba przekroczy 100. Uwaga - prosze nie uzywac operacji continue i break, a sterowac tylko parametrami petli.
 void zadanie2_9()
 {
 	int x;
@@ -265,13 +265,13 @@ void zadanie2_9()
 	
 }
 
-//Napisaæ metodê void NewLine(). Powinna ona wypisaæ na ekran pojedyncz¹ pust¹ liniê. U¿yæ tej metodê w main()
+//Napisac metode void NewLine(). Powinna ona wypisac na ekran pojedyncza pusta linie. Uzyc tej metodê w main()
 void Newline()
 {
 	cout<<""<<endl;
 }
 
-// Napisaæ metodê void NewLines(int count). Powinna ona wypisaæ tyle nowych linii, ile zosta³o podanych W PARAMETRZE count (nale¿y u¿yæ pêtli for). U¿yæ metodê w main()
+// Napisac metode void NewLines(int count). Powinna ona wypisaæ tyle nowych linii, ile zostalo podanych W PARAMETRZE count (nalezy u¿yæ petli for). Uzyc metode w main()
 void Newlines(int x)
 {
 	for (int i=1; i<=x;i++) {
@@ -279,7 +279,9 @@ void Newlines(int x)
 	}
 }
 
-//
+//Napisac metode void WriteBiggerNumber(int x, int y).
+//Metoda powinna pobrac 2 parametry i zwrocic wiekszy z nich. Wykorzystac funckje w metodzie main().
+//UWAGA - pobieranie liczb od uzytkownika powinno odbyc sie w funkcji main(), a NIE w WriteBiggerNumber! Do funkcji nalezy jedynie przeslac pobrane wczesniej parametry.
 int WriteBiggerNumber(int x, int y)
 {
 	if (x >= y) {
@@ -289,57 +291,59 @@ int WriteBiggerNumber(int x, int y)
 	}
 }
 
-//
+//Napisac metode Multiply(int x, int y).
+//Metoda powinna ZWROCIC (s³owo kluczowe return) iloczyn dwoch parametrow.
+//Uwaga! Metoda NIE POWINNA wypisywac wyniku - powinien on byæ wyswietlony w funkcji main
 int Multiply(int x, int y)
 {
 	return x*y;
 }
 int main() {
 	int x, y;
-	//zadanie1_1();
-	//system("pause");
-	//clear();
-	//zadanie1_2();
-	//system("pause");
-	//clear();
-	//zadanie1_3();
-	//system("pause");
-	//clear();
-	//zadanie1_4();
-	//system("pause");
-	//clear();
-	//zadanie1_5();
-	//system("pause");
-	//clear();
-	//zadanie1_6();
-	//system("pause");
-	//clear();
-	//zadanie2_1();
-	//system("pause");
-	//clear();
-	//zadanie2_2();
-	//system("pause");
-	//clear();
-	//zadanie2_3();
-	//system("pause");
-	//clear();
-	//zadanie2_4();
-	//system("pause");
-	//clear();
-	//zadanie2_5();
-	//system("pause");
-	//clear();
-	//zadanie2_6();
-	//system("pause");
-	//clear();
-	//zadanie2_7();
-	//system("pause");
-	//clear();
-	//zadanie2_8();
-	//system("pause");
-	//clear();
-	//zadanie2_9();
-	//system("pause");
+	zadanie1_1();
+	system("pause");
+	clear();
+	zadanie1_2();
+	system("pause");
+	clear();
+	zadanie1_3();
+	system("pause");
+	clear();
+	zadanie1_4();
+	system("pause");
+	clear();
+	zadanie1_5();
+	system("pause");
+	clear();
+	zadanie1_6();
+	system("pause");
+	clear();
+	zadanie2_1();
+	system("pause");
+	clear();
+	zadanie2_2();
+	system("pause");
+	clear();
+	zadanie2_3();
+	system("pause");
+	clear();
+	zadanie2_4();
+	system("pause");
+	clear();
+	zadanie2_5();
+	system("pause");
+	clear();
+	zadanie2_6();
+	system("pause");
+	clear();
+	zadanie2_7();
+	system("pause");
+	clear();
+	zadanie2_8();
+	system("pause");
+	clear();
+	zadanie2_9();
+	system("pause");
 	cout<<"Zadanie 3.1"<<endl;
 	Newline();
 	system("pause");
@@ -353,7 +357,7 @@ int main() {
 	cin>>x;
 	cout<<"Podaj liczbe: ";
 	cin>>y;
-	cout<<WriteBiggerNumber(x, y);
+	cout<<WriteBiggerNumber(x, y)<<endl;
 	system("pause");
 	clear();
 	cout<<"Zadanie 3.4"<<endl;
@@ -361,7 +365,7 @@ int main() {
 	cin>>x;
 	cout<<"Podaj liczbe: ";
 	cin>>y;
-	cout<<Multiply(x, y);
+	cout<<Multiply(x, y)<<endl;
 	system("pause");
 	clear();
 	return 0;
