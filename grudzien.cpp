@@ -37,7 +37,40 @@ int Sum(int *tab, int wymiar){
 	}
 	return sum;
 }
+
+//zad 3.1 Napisaæ metodê int getLength(char *str) , w której W£ASNORECZNIE (nie wolno korzystaæ z metody strlen() )
+//przeliczony zostanie rozmiar ³añcucha (bez null-terminatora). Dla przyk³adu dla „Hello!" wynik powinien wynosiæ 6. 
+int getLength(char *tab){
+	int i=0;
+	while(tab[i]!= '\0'){
+		i++;
+	}
+	return i;
+}
+
+//zad 3.2 Napisaæ metodê void Reverse (char *str) , która wypisze ³añcuch znaków od koñca (zakaz u¿ywania strlen,
+//mo¿na uzyæ metodê z zadania 3.1.) 
+void Reverse(char *tab){
+	int dlugosc = getLength(tab);
+	for(int i = dlugosc - 1; i >= 0; i--){
+		cout << tab[i];
+	}
+}
+//zad 3.3 Napisaæ metodê bool containsDigits(char * str), która zwróci informacjê, czy w danym stringu znajduje siê
+//jakakolwiek cyfra. Dla przyk³adu : „asdfgzxcv" -> false, „asdf5asdf" -> true
+bool containsDigits(char *tab){
+	int dlugosc = getLength(tab);
+	for(int i = 0; i < dlugosc; i++){
+		if((int)tab[i] >= 48 && (int)tab[i] <= 57){
+			cout << i << endl;
+			cout << tab[i];
+			return true;
+		}
+	}
+	return false;
+}
 int main() {
+	/*
 	// zad 1.1 Utworzyæ 5-cio elementow¹ tablicê typu int. Pobraæ od u¿ytkownika 5 elementów i dodaæ je do tablicy.
 	int x;
 	int wymiar = 5;
@@ -92,5 +125,24 @@ int main() {
 	printDots(tab, wymiar);
 	
 	cout << "Suma elementow tablicy: " << Sum(tab, wymiar) << endl;
+	
+	//zad 2.5 Zaimplementowaæ algorytm sortowania b¹belkowego (w funkcji main(), nie ma potrzeby tworzenia dodatkowej funkcji). Algorytm powinien posortowaæ dowolnie du¿¹ tablicê w kolejnoœci niemalej¹cej.
+	for(int i = 0; i < wymiar; i++){
+		for(int j = 1; j < wymiar - i; j++){
+			if(tab[j-1] > tab[j]){
+				swap(tab[j-1], tab[j]);
+			}
+		}
+	}
+	*/
+	char *str = "Hello!";
+	cout << "dlugosc slowa " << str << " to: " << getLength(str) << endl;
+	Reverse(str);
+	cout << endl;
+	if(containsDigits(str)){
+		cout << "jest liczba";
+	} else {
+		cout << "nie ma liczby";
+	}
 	return 0;
 }
