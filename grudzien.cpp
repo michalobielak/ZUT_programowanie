@@ -100,93 +100,103 @@ char *reverseString(char *s){
 }
 int main() {
 	// zad 1.1 Utworzyæ 5-cio elementow¹ tablicê typu int. Pobraæ od u¿ytkownika 5 elementów i dodaæ je do tablicy.
-	int x;
-	int wymiar = 5;
-	int *tab;
-    tab = (int *)malloc(wymiar * sizeof(int));
-    for(int i = 0; i < wymiar; i++) {
-    	printf ("Podaj cyfre numer %d: ",i+1);
-    	cin >> x;
-    	tab[i] = x;
-	}
-	// Nastepnie wyœwietliæ najwiêksz¹ liczbê z tablicy (algorytm do samodzielnej implementacji). 
-	int maks = tab[0];
-	for (int i=1; i < wymiar; i++){
-    if (tab[i] > maks){
-       maks = tab[i];}
-    }
-    cout << "Najwiejsza liczba to: " << maks << endl;
-    //zad 1.2 Wyœwietliæ w pêtli tablice z zadania 1.1 od pocz¹tku i od koñca (dwie pêtle) 
-    cout << "Od poczatku: ";
-    for(int i = 0; i < wymiar; i++){
-    	cout << tab[i]  << ", ";
-	}
-	cout << endl;
-	cout << "Od konca: ";
-	for(int i = wymiar-1; i >= 0; i--){
-    	cout << tab[i]  << ", ";
-	}
-	cout << endl;
-	//zad 1.3 Napisaæ algorytm sprawdzaj¹cy, czy tablica jest posortowana w kolejnoœci niemalej¹cej 
-	bool isSort = 1;
-	for(int i = 0; i < wymiar-2; i++){
-		if(tab[i] > tab[i+1]) { //w kolejnosci niemalejacej rozumiem, ze element tab[i] moze byc rowny tab[i+1], jesli nie toarunek powinien wygladac tak: tab[i] >= tab[i+1]
-			isSort = 0;
+	{
+		cout << "zadanie 1" << endl;
+		int x;
+		int wymiar = 5;
+		int *tab;
+    	tab = (int *)malloc(wymiar * sizeof(int));
+    	for(int i = 0; i < wymiar; i++) {
+    		printf ("Podaj cyfre numer %d: ",i+1);
+    		cin >> x;
+    		tab[i] = x;
 		}
-	}
-	if(isSort){
-		cout << "Jest posortowana niemalejaco" << endl;
-	} else {
-		cout << "Nie jest posortowana niemalejaco" << endl;
-	}
-	
-	
-	if(isSorted(tab, wymiar)){
-		cout << "Jest posortowana niemalejaco" << endl;
-	} else {
-		cout << "Nie jest posortowana niemalejaco" << endl;
-	}
-	
-	cout << "Wypisywanie od konca za pomoca funkcji printBackwards: ";
-	printBackwards(tab, wymiar);
-	cout << endl;
-	printDots(tab, wymiar);
-	
-	cout << "Suma elementow tablicy: " << Sum(tab, wymiar) << endl;
-	
-	//zad 2.5 Zaimplementowaæ algorytm sortowania b¹belkowego (w funkcji main(), nie ma potrzeby tworzenia dodatkowej funkcji). Algorytm powinien posortowaæ dowolnie du¿¹ tablicê w kolejnoœci niemalej¹cej.
-	for(int i = 0; i < wymiar; i++){
-		for(int j = 1; j < wymiar - i; j++){
-			if(tab[j-1] > tab[j]){
-				swap(tab[j-1], tab[j]);
+		// Nastepnie wyœwietliæ najwiêksz¹ liczbê z tablicy (algorytm do samodzielnej implementacji). 
+		int maks = tab[0];
+		for (int i=1; i < wymiar; i++){
+    	if (tab[i] > maks){
+       		maks = tab[i];}
+    	}
+    	cout << "Najwiejsza liczba to: " << maks << endl;
+    	//zad 1.2 Wyœwietliæ w pêtli tablice z zadania 1.1 od pocz¹tku i od koñca (dwie pêtle) 
+    	cout << "Od poczatku: ";
+    	for(int i = 0; i < wymiar; i++){
+    		cout << tab[i]  << ", ";
+		}
+		cout << endl;
+		cout << "Od konca: ";
+		for(int i = wymiar-1; i >= 0; i--){
+    		cout << tab[i]  << ", ";
+		}
+		cout << endl;
+		//zad 1.3 Napisaæ algorytm sprawdzaj¹cy, czy tablica jest posortowana w kolejnoœci niemalej¹cej 
+		bool isSort = 1;
+		for(int i = 0; i < wymiar-2; i++){
+			if(tab[i] > tab[i+1]) { //w kolejnosci niemalejacej rozumiem, ze element tab[i] moze byc rowny tab[i+1], jesli nie toarunek powinien wygladac tak: tab[i] >= tab[i+1]
+				isSort = 0;
 			}
 		}
-	}
+		if(isSort){
+			cout << "Jest posortowana niemalejaco" << endl;
+		} else {
+			cout << "Nie jest posortowana niemalejaco" << endl;
+		}
+
+		cout << endl << "zadanie 2.1" << endl;
+		if(isSorted(tab, wymiar)){
+		cout << "Jest posortowana niemalejaco" << endl;
+		} else {
+			cout << "Nie jest posortowana niemalejaco" << endl;
+		}
+		cout << endl << "zadanie 2.2" << endl;
+		cout << "Wypisywanie od konca za pomoca funkcji printBackwards: ";
+		printBackwards(tab, wymiar);
+		cout << endl;
 	
+		cout << endl << "zadanie 2.3" << endl;
+		printDots(tab, wymiar);
+	
+		cout << endl << "zadanie 2.4" << endl;
+		cout << "Suma elementow tablicy: " << Sum(tab, wymiar) << endl;
+		
+	//zad 2.5 Zaimplementowaæ algorytm sortowania b¹belkowego (w funkcji main(), nie ma potrzeby tworzenia dodatkowej funkcji). Algorytm powinien posortowaæ dowolnie du¿¹ tablicê w kolejnoœci niemalej¹cej.
+		cout << endl << "zadanie 2.5" << endl;
+		for(int i = 0; i < wymiar; i++){
+			for(int j = 1; j < wymiar - i; j++){
+				if(tab[j-1] > tab[j]){
+					swap(tab[j-1], tab[j]);
+				}
+			}
+		}
+		free(tab);
+	}
 	
 	//Zad 3.4 Pobraæ od u¿ytkownika ³añcuch znaków (dowolna metoda). Przekazaæ go do ka¿dej z metod z 3. czêœci zadañ
-	char str[5];
-	cout << "Podaj lancuch znakow" << endl;
-	for(int i = 0; i < 5; i++) {
-    	cout << "Znak o id " << i <<": ";
-    	cin >> str[i];
+	{
+		cout << endl << "zadanie 3" << endl;
+		char str[5];
+		cout << "Podaj lancuch znakow" << endl;
+		for(int i = 0; i < 5; i++) {
+    		cout << "Znak o id " << i <<": ";
+    		cin >> str[i];
+		}
+		cout << str;
+		// metoda z 3.1
+		cout << "dlugosc slowa " << str << " to: " << getLength(str) << endl;
+		// metoda z 3.2
+		Reverse(str);
+		cout << endl;
+		// metoda z 3.3
+		if(containsDigits(str)){
+			cout << "jest liczba";
+		} else {
+			cout << "nie ma liczby";
+		}
 	}
-	cout << str;
-	// metoda z 3.1
-	cout << "dlugosc slowa " << str << " to: " << getLength(str) << endl;
-	// metoda z 3.2
-	Reverse(str);
-	cout << endl;
-	// metoda z 3.3
-	if(containsDigits(str)){
-		cout << "jest liczba";
-	} else {
-		cout << "nie ma liczby";
-	}
-	
 	
 	//zad 4.1 Pobraæ od u¿ytkownika liczbê n. Zaalokowaæ pamiêæ na n elementów int i pobraæ je od u¿ytkownika. Wykonaæ na niej metodê printBackwards z 2.2. 
 	{
+		cout << endl << "zadanie 4.1" << endl;
 		int n;
 		cout << "Podaj wymiar tablicy: ";
 		cin >> n;
@@ -203,6 +213,7 @@ int main() {
 	//zaalokowaæ pamiêæ i utworzyæ tablicê, w której bêd¹ tylko UJEMNE wartoœci z pierwszej tablicy. Na koniec zwolniæ
 	//pamiêæ na obie tablice. 
 	{
+		cout << endl << "zadanie 4.2" << endl;
 		int n;
 		int licznik = 0;
 		cout << "Podaj wymiar tablicy: ";
@@ -228,16 +239,18 @@ int main() {
 					j++;
 				}
 			}
-		}
-		cout << "liczby ujemne: ";
-		for(int i = 0; i < licznik; i++){
-			cout << tab2[i] << ", ";
+			cout << "liczby ujemne: ";
+			for(int i = 0; i < licznik; i++){
+				cout << tab2[i] << ", ";
+			}
+			free(tab2);
 		}
 		free(tab);
-		free(tab2);
+		
 	}
 	
 	{
+		cout << endl << "zadanie 4.4" << endl;
 		char *str;
 		str = (char *)malloc(10 * sizeof(char));
 		for(int i = 0; i < 10; i++){
