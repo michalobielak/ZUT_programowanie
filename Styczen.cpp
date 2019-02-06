@@ -33,30 +33,24 @@ int main() {
     int age;
     int height;
     int semestr;
-    Student student1;
-    Student student2;
-    cout<<"student 1: "<<endl;
-    cout<<"jego wiek: ";
-    cin>>age;
-    cout<<"jego wzrost: ";
-    cin>>height;
-    cout<<"semestr: ";
-    cin>>semestr;
-    student1 = *Create(age, height, semestr);
-    cout<<"student 2: "<<endl;
-    cout<<"jego wiek: ";
-    cin>>age;
-    cout<<"jego wzrost: ";
-    cin>>height;
-    cout<<"semestr: ";
-    cin>>semestr;
-    student2 = *Create(age, height, semestr);
-    cout<<"Sudent 1:"<<endl;
-    PrintStudent(&student1);
-    cout<<"Sudent 2:"<<endl;
-    PrintStudent(&student2);
-    cout<<"Taki sam? "<<AreEqueal(&student1, &student2)<<endl;
-    free(&student1);
-    free(&student2);
+    Student *tab;
+	tab = (Student *)malloc(3 * sizeof(Student));
+    for (int i = 0; i < 3; i++) {
+    	cout<<"student "<<i+1<< ": "<<endl;
+    	cout<<"jego wiek: ";
+    	cin>>age;
+    	cout<<"jego wzrost: ";
+    	cin>>height;
+    	cout<<"semestr: ";
+    	cin>>semestr;
+    	tab[i] = *Create(age, height, semestr);
+    	cout<<endl;
+	}
+    for (int i = 0; i < 3; i++) {
+    	cout<<"Sudent "<<i+1<<":"<<endl;
+    	PrintStudent(&tab[i]);
+    	cout<<endl;
+	}
+    free(&tab);
     return 0;
 }
